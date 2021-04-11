@@ -44,6 +44,7 @@ func init(expression: String = '', position_offset = 'left') -> void:
 
 
 func _ready():
+	$Tween.connect("tween_all_completed", self, "queue_free")
 	if debug:
 		print('Character data loaded: ', character_data)
 		print(rect_position, $TextureRect.rect_size)
