@@ -936,7 +936,7 @@ func _stop_close_dialog():
 	$TextBubble/CloseDialog/Timer.stop()
 
 
-func _on_close_dialog_timeout(tween, close_dialog_timer):
+func _on_close_dialog_timeout():
 	hide()
 	_on_timeline_end()
 
